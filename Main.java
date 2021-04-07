@@ -34,8 +34,25 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        Bank obj = new Bank("Nirmal", 1000000);
-        obj.deposit(1000000);
+        String myname;
+        int balance;
+
+        System.out.print("Enter your name : ");
+        myname = sc.nextLine();
+
+        System.out.print("Enter your bank balance : ");
+        balance = sc.nextInt();
+
+        //Creating Bank object
+        Bank obj = new Bank(myname, balance);
+
+        //Depositing money
+        obj.deposit(100000);
+
+        //Withdrawing money
+        obj.withdraw(10000);
+
+        //Checking values
         obj.checkValues();
     }
 }
